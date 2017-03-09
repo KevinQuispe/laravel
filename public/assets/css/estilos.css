@@ -1,0 +1,26 @@
+body{
+    background:url('imagenes/fondo/logo2.jpg') top center no-repeat fixed;
+    background-size:cover;
+    
+}
+.jumbotron{
+	opacity: 0.8;
+}
+
+.pie{
+  width: 100%;
+  height: 100px;
+  background-color:#00897b;
+  color: white;
+  padding:30px;
+  text-align:center;
+  margin-top: 300px;
+  font-family: castellar;
+}
+}
+.panel-presentacion
+{
+	position: relative;
+	top:50px;
+}
+
