@@ -19,7 +19,7 @@ class Book extends Model
       $reglas=self::$roles;
       return \Validator::make($data,$reglas);
     }
-//     public static $mensajes[
+//     public static mensajes[
 //         'name.required'=>'debe ingresar nombre',
 //         'description.required'=>'debe ingresar description',
 //         'paginate.required'=>'debe ingresar pagina',
