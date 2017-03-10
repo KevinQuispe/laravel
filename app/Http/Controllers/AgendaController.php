@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Contactos;
@@ -24,7 +21,7 @@ class AgendaController extends Controller
         $usuario    = User::find(Auth::user()->id);
         $contactos  = $usuario->contactos;
         return view('agenda.index',compact('contactos'));
-        
+
     }
 
     /**
@@ -51,7 +48,6 @@ class AgendaController extends Controller
            'telefono'   => $request['telefono'],
            'email'      => $request['email'],
            'direccion'  => $request['direccion'],
-           'user_id'    => Auth::user()->id,
         ]);
 
         Session::flash('message','Contacto creado correctamente');
@@ -103,8 +99,7 @@ class AgendaController extends Controller
     {
         $contacto = Contactos::find($id);
         $contacto->delete();
-
         Session::flash('message','Contacto eliminado correctamente');
-        return redirect('/agenda');   
+        return redirect('/agenda');
     }
 }

@@ -15,15 +15,15 @@ class Book extends Model
       'author'=>'required|min:2|max:20',
       'year'=>'required|min:4|max:4|numeric',
     ];
+    public static $messages=[
+        'name.required'=>'debe ingresar nombre',
+        'description.required'=>'debe ingresar description',
+        'paginate.required'=>'debe ingresar pagina',
+        'author.required'=>'debe ingresar autor',
+];
     public static function validar_Data($data){
       $reglas=self::$roles;
       return \Validator::make($data,$reglas);
     }
-//     public static mensajes[
-//         'name.required'=>'debe ingresar nombre',
-//         'description.required'=>'debe ingresar description',
-//         'paginate.required'=>'debe ingresar pagina',
-//         'author.required'=>'debe ingresar autor',
-//
-// ]
+
 }
